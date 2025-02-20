@@ -1,3 +1,33 @@
+$(".mtr-highlight__outer").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 //PDF OPEN IN SAME WINDOW
 // document.addEventListener("DOMContentLoaded", function() {
 //     var links = document.querySelectorAll('a[target="_blank"]');
