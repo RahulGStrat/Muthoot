@@ -68,76 +68,84 @@ const numTabsToShowMobile = 1; // Number of tabs to show on mobile
 
 // Function to show/hide tabs based on current index
 function showTabs() {
-    tabs.forEach((tab, index) => {
-        if (index >= currentTabIndex && index < currentTabIndex + getCurrentNumTabsToShow()) {
-            tab.classList.remove('hidden');
-        } else {
-            tab.classList.add('hidden');
-        }
-    });
-
-    // Display or hide the previous arrow
-    if (currentTabIndex > 0) {
-        prevArrow.style.display = 'block';
+  tabs.forEach((tab, index) => {
+    if (
+      index >= currentTabIndex &&
+      index < currentTabIndex + getCurrentNumTabsToShow()
+    ) {
+      tab.classList.remove("hidden");
     } else {
-        prevArrow.style.display = 'none';
+      tab.classList.add("hidden");
     }
+  });
 
-    // Display or hide the next arrow
-    if (currentTabIndex + getCurrentNumTabsToShow() < tabs.length) {
-        nextArrow.style.display = 'block';
-    } else {
-        nextArrow.style.display = 'none';
-    }
+  // Display or hide the previous arrow
+  if (currentTabIndex > 0) {
+    prevArrow.style.display = "block";
+  } else {
+    prevArrow.style.display = "none";
+  }
+
+  // Display or hide the next arrow
+  if (currentTabIndex + getCurrentNumTabsToShow() < tabs.length) {
+    nextArrow.style.display = "block";
+  } else {
+    nextArrow.style.display = "none";
+  }
 }
 
 // Function to show/hide tabs based on current index
 function showTabs() {
-    tabs.forEach((tab, index) => {
-        if (index >= currentTabIndex && index < currentTabIndex + getCurrentNumTabsToShow()) {
-            tab.classList.remove('hidden');
-        } else {
-            tab.classList.add('hidden');
-        }
-    });
-
-    // Display or hide the previous arrow
-    if (currentTabIndex > 0) {
-        prevArrow.style.display = 'block';
+  tabs.forEach((tab, index) => {
+    if (
+      index >= currentTabIndex &&
+      index < currentTabIndex + getCurrentNumTabsToShow()
+    ) {
+      tab.classList.remove("hidden");
     } else {
-        prevArrow.style.display = 'none';
+      tab.classList.add("hidden");
     }
+  });
 
-    // Display or hide the next arrow
-    if (currentTabIndex + getCurrentNumTabsToShow() < tabs.length) {
-        nextArrow.style.display = 'block';
-    } else {
-        nextArrow.style.display = 'none';
-    }
+  // Display or hide the previous arrow
+  if (currentTabIndex > 0) {
+    prevArrow.style.display = "block";
+  } else {
+    prevArrow.style.display = "none";
+  }
+
+  // Display or hide the next arrow
+  if (currentTabIndex + getCurrentNumTabsToShow() < tabs.length) {
+    nextArrow.style.display = "block";
+  } else {
+    nextArrow.style.display = "none";
+  }
 }
 
 // Function to get the current number of tabs to show based on viewport size
 function getCurrentNumTabsToShow() {
-    if (window.innerWidth < 768) { // Mobile viewport width
-        return numTabsToShowMobile;
-    } else { // Desktop and tablet viewport width
-        return numTabsToShowDesktop;
-    }
+  if (window.innerWidth < 768) {
+    // Mobile viewport width
+    return numTabsToShowMobile;
+  } else {
+    // Desktop and tablet viewport width
+    return numTabsToShowDesktop;
+  }
 }
 
 // Function to set the active tab index
 function setActiveTabIndex(index) {
-    currentTabIndex = index;
-    showTabs();
+  currentTabIndex = index;
+  showTabs();
 }
 
 // Initial setup
-let activeTabElement = document.querySelector('.nav-link.active'); // Get the active tab element
+let activeTabElement = document.querySelector(".nav-link.active"); // Get the active tab element
 let activeTabIndex = Array.from(tabs).indexOf(activeTabElement.parentElement); // Get its index among the tabs
 if (activeTabIndex !== -1) {
-    setActiveTabIndex(Math.max(0, activeTabIndex - 3)); // Ensure it's shown as the 4th tab
+  setActiveTabIndex(Math.max(0, activeTabIndex - 5)); // Ensure it's shown as the 4th tab
 } else {
-    setActiveTabIndex(Math.max(0, tabs.length - getCurrentNumTabsToShow()));
+  setActiveTabIndex(Math.max(0, tabs.length - getCurrentNumTabsToShow()));
 }
 
 // Event listener for next arrow click

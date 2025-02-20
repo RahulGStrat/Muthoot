@@ -1,17 +1,51 @@
 //investors-menu
-.mtr-investors.ubermenu-has-submenu-mega {
+// .mtr-investors.ubermenu-has-submenu-mega {
 
-    .ubermenu-target {
-        padding: 8px 0 !important;
-        margin: 0 8px;
-        font-size: 13px !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        padding: 12px 16px 12px !important;
-    }
+//     .ubermenu-target {
+//         padding: 8px 0 !important;
+//         margin: 0 8px;
+//         font-size: 13px !important;
+//         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+//         padding: 12px 16px 12px !important;
+//     }
 
-    .ubermenu-submenu-type-stack {
-        padding: 0 !important;
+//     .ubermenu-submenu-type-stack {
+//         padding: 0 !important;
+//     }
+// }
+
+.ubermenu-submenu-id-39984 {
+    .ubermenu-target{
+        color: #000;
+        &:hover {
+            color: var(--clr-blue2) !important;
+        }
     }
+    .mtr-menuhead {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: var(--clr-blue2) !important;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            left: 20px;
+            bottom: 0px;
+            width: 40px;
+            height: 2px;
+            background-color: var(--clr-blue2);
+        }
+    }
+}
+
+
+
+// opacity 
+.fade:not(.show) {
+    opacity: 1;
+}
+.tab-content>.tab-pane {
+    display: block;
 }
 
 //captcha 

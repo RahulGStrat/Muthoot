@@ -22,7 +22,7 @@
       display: flex;
       align-items: center;
       border-radius: 20px;
-      padding: 7px 10px;
+      padding: 10px 14px;
       background-color: #0098DF;
       img {
          width: 12px;
@@ -32,6 +32,7 @@
          font-size: 13px;
          margin-left: 5px;
          color: #fff;
+         margin-left: 6px;
       }
    }
 }
@@ -41,8 +42,9 @@
          font-size: 14px;
       }
       &__dwnld {
-         button {
+         span {
             font-size: 12px;
+            display: none;
          }
       }
    }

@@ -5,6 +5,12 @@
         padding: 40px 0;
     }
 
+    .mtr-title--font30 {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     .nav-link {
         color: var(--clr-blue2);
         min-height: 75px;
@@ -225,11 +231,17 @@
             width: calc(7% - 12px);
             margin: 0 6px;
         }
+        .nav-item.docs {
+            width: calc(17% - 12px);
+        }
         .nav-link {
             border: 1px solid var(--clr-blue2);
             min-height: auto;
             padding: 10px;
             border-radius: 6px;
+        }
+        .nav-link::after {
+            content: unset;
         }
         .nav-link.active {
             background-color: var(--clr-blue2);
@@ -256,7 +268,30 @@
                     margin-bottom: 24px;
                 }
             }
+
+            .infolist {
+                li {
+                    position: relative;
+                    padding-left: 15px;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #0098DF;
+                    }
+                }
+                
+            }
         }
+
+        button:after {
+            content: unset;
+          }
     }
 }
 
@@ -288,6 +323,9 @@
         .mtr-financialtab {
             .nav-item {
                 width: calc(10% - 12px);
+            }
+            .nav-item.docs {
+                width: calc(30% - 12px);
             }
         }
         
@@ -343,6 +381,9 @@
             .nav-item {
                 width: calc(33.3% - 12px);
                 margin-bottom: 12px;
+            }
+            .nav-item.docs {
+                width: calc(100% - 12px);
             }
         }
     }
