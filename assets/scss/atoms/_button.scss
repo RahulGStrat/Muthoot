@@ -5,20 +5,21 @@
   &:hover {
     color: #0098DF;
     .mtr-btn__icon img {
-      transform: translateX(7px);
+      transform: translateX(0);
     }
   }
   &__icon {
-    display: inline-block;
+    display: inline-flex;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    padding: 6px 0;
-    margin-left: 8px;
+    margin-left: 4px;
     background-color: #0098DF;
     vertical-align: bottom;
+    overflow: hidden;
     img {
-      width: 45%;
+      width: 90%;
+      transform: translateX(-14px);
       transition: transform 0.3s ease-in-out;
     }
   }
