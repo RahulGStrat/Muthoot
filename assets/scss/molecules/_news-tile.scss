@@ -1,0 +1,62 @@
+.news-tile {
+  display: block; /* Make it a block-level element */
+  border-radius: 15px;
+  overflow: hidden; /* Clip content to rounded corners */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  width: 350px; /* Adjust as needed */
+  font-family: sans-serif; /* Basic font */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow on hover */
+}
+
+.news-tile__image {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: opacity 0.3s ease; /* Smooth transition for image opacity on hover */
+}
+
+.news-tile__content {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-tile__title {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+  transition: color 0.3s ease; /* Smooth transition for title color on hover */
+}
+
+.news-tile__link {
+  color: #007BFF; /* Example blue color */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for link styles */
+}
+
+/* Hover Styles */
+.news-tile:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+.news-tile:hover .news-tile__image {
+  opacity: 0.9; /* Slightly fade image on hover */
+}
+
+.news-tile:hover .news-tile__title {
+  color: #0C456C; /* Example darker title color on hover */
+}
+
+.news-tile:hover .news-tile__link {
+  text-decoration: underline; /* Underline link on hover */
+  color: #1994E5; /* Example different link color on hover */
+}
