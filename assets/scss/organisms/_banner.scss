@@ -1,8 +1,11 @@
 .mtr-banner{
     background-image: url('../../../assets/images/banner.png');
     width: 100%;
-    min-height: 80vh;
+    min-height: 540px;
     height: auto;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__content{
         width: 70%;
@@ -47,11 +50,11 @@
         }
     }
 }
-@include tablet{
+@include tablet-pro{
     .mtr-banner{
         width: 100%;
         height: auto;
-        min-height: 40vh;
+        min-height: 100vh;
 
         &__content{
             width: 100%;
