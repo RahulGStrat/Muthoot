@@ -1,0 +1,57 @@
+.mtr-heading {
+  font-size: 42px;
+  line-height: 52px;
+  color: #0098DF;
+  font-weight: 700;
+  span {
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #0098DF;
+  }
+}
+
+.mtr-whitehead {
+  font-size: 46px;
+  line-height: 56px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.mtr-bluehead {
+  font-size: 36px;
+  line-height: 46px;
+  color: #014565;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@include mobile-tablet {
+  .mtr-bluehead {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@include tablet {
+ .mtr-heading { 
+  font-size: 36px;
+  line-height: 46px;
+ }
+ .mtr-whitehead {
+  font-size: 40px;
+  line-height: 50px;
+ }
+}
+
+@include mobile {
+ .mtr-heading { 
+  font-size: 32px;
+  line-height: 42px;
+ }
+ .mtr-whitehead {
+  font-size: 36px;
+  line-height: 46px;
+ }
+}
