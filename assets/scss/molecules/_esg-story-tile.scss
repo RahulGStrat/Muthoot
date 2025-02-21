@@ -1,7 +1,6 @@
 .mtr-storytile {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 60px 0;
   gap: 20px;
   &__tile {
@@ -13,6 +12,7 @@
   &__desc {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 12px;
     h4 {
       font-size: 24px;
@@ -23,6 +23,22 @@
   &__img {
     width: 100%;
     border-radius: 10px;
+  }
+}
+
+@include tablet { 
+  .mtr-storytile {
+    &__tile {
+      padding: 14px;
+    }
+    &__desc {
+      h4 {
+        font-size: 20px;
+      }
+      .mtr-btn {
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -43,6 +59,9 @@
         &__icon {
           width: 24px;
           height: 24px;
+          img {
+            transform: translateX(-11px);
+          }
         }
       }
     }
