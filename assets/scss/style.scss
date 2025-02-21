@@ -24,6 +24,7 @@
 @import "molecules/annual-report-tab";
 @import "molecules/bankers";
 @import "molecules/esg-highlights-tile";
+@import "molecules/news-tile";
 
 // organisms
 @import "organisms/grp_init";
@@ -47,4 +48,9 @@
 @import "organisms/esg-highlights";
 @import "organisms/_mission-and-vision";
 @import "organisms/header";
+@import 'organisms/footer';
+@import 'organisms/banner';
+@import "organisms/esg-highlights";
+@import "organisms/impact-stories";
+@import "organisms/news-videos";
 // pages
