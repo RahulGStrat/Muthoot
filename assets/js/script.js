@@ -1,3 +1,4 @@
+// ESG Highlights slick 
 $(".mtr-highlight__outer").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -28,6 +29,34 @@ $(".mtr-highlight__outer").slick({
     }
   ]
 });
+
+// Impact stories slick
+$('.mtr-impact__outer').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
 //PDF OPEN IN SAME WINDOW
 // document.addEventListener("DOMContentLoaded", function() {
 //     var links = document.querySelectorAll('a[target="_blank"]');
