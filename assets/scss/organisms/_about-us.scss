@@ -30,14 +30,12 @@
 @include mobile{
     .mtr-about{
         &__wrap{
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
         &__left{
             width: 100%;
             img{
-                width: 100%;
-                height: auto;
-                border-radius: 20px;
+                height: 150px;
             }
         }
         &__right{
