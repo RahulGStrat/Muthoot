@@ -83,6 +83,8 @@
     }
 }
 
+
+
 @include mobile-tablet {
     .mtr-description {
         padding-bottom: 10px;
@@ -127,6 +129,7 @@
             padding: 20px 0px;
         }
         &__section{
+            flex-direction: column-reverse;
             padding: 20px;
         }
         &__content{

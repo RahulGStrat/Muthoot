@@ -33,6 +33,11 @@
     font-size: 30px;
     line-height: 40px;
   }
+  .mtr-heading { 
+    span {
+      padding-bottom: 2px;
+    }
+   }
 }
 
 @include tablet {
@@ -46,13 +51,18 @@
  }
 }
 
+@include tablet-pro {
+  .mtr-heading { 
+    span {
+      padding-bottom: 2px;
+    }
+  }
+ }
+
 @include mobile {
  .mtr-heading { 
   font-size: 32px;
   line-height: 42px;
-  span {
-    padding-bottom: 2px;
-  }
  }
  .mtr-whitehead {
   font-size: 36px;
