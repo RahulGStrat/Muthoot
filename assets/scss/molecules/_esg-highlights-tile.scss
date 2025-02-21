@@ -9,6 +9,7 @@
     margin: 20px;
     border-radius: 10px;
     display: flex !important;
+    filter: grayscale(0.8) brightness(0.8);
     justify-content: center;
     align-items: center;
     overflow: hidden; 
@@ -26,6 +27,7 @@
       }
 
       &:hover {
+        filter: grayscale(0) brightness(1); 
         &::before {
           background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); 
         }
