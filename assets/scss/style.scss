@@ -25,6 +25,7 @@
 @import "molecules/bankers";
 @import "molecules/esg-highlights-tile";
 @import "molecules/news-tile";
+@import './molecules/tile';
 
 // organisms
 @import "organisms/grp_init";
@@ -55,4 +56,6 @@
 @import "organisms/impact-stories";
 @import "organisms/news-videos";
 @import "organisms/esg-description";
+@import 'organisms/aboutus-banner';
+@import 'organisms/principles';
 // pages
