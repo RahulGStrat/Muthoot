@@ -1,6 +1,31 @@
 .mtr-principle{
+    &__heading{
+        padding: 20px 10px 100px 10px;
+        text-align: center;
+    }
     &__wrap{
         display: flex;
         gap: 40px;
+        padding-bottom: 20px;
+
+        .mtr-tile{
+            width: 50%;
+        }
+    }
+}
+
+@include mobile{
+    .mtr-principle{
+        &__heading{
+            padding-bottom: 50px;
+        }
+        &__wrap{
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            .mtr-tile{
+                width: 100%;
+            }
+        }
     }
 }
