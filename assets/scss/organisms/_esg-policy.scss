@@ -1,4 +1,5 @@
 .mtr-policy{
+    margin-top: 80px;
     &__top{
         display: flex;
         justify-content: space-between;
@@ -30,7 +31,30 @@
     }
 }
 
-@include mobile-tablet {
+@include tablet {
+    .mtr-policy{
+        &__top{
+            gap: 20px;
+        }
+        &__img{
+            width: 100%;
+            height: auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__bottom{
+            gap: 20px;
+        }
+        &__content{
+            width: 100%;
+        }   
+    }
+    
+}
+
+@include mobile {
     .mtr-policy{
         &__top{
             flex-direction: column;

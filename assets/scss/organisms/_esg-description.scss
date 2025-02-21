@@ -1,7 +1,7 @@
 .mtr-description {
     background-color: #F0F7FF;
     padding-bottom: 30px;
-
+    margin-top: 80px;
     h3 {
         font-size: 45px;
         color: #161616;
@@ -92,7 +92,6 @@
         }
 
         &__section {
-            flex-direction: column-reverse;
             gap: 20px;
             padding: 20px;
         }
