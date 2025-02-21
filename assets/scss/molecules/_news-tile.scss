@@ -1,62 +1,85 @@
-.news-tile {
-  display: block; /* Make it a block-level element */
-  border-radius: 15px;
-  overflow: hidden; /* Clip content to rounded corners */
-  background-color: #fff; /* White background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-  width: 350px; /* Adjust as needed */
-  font-family: sans-serif; /* Basic font */
-  transition: box-shadow 0.3s ease; /* Smooth transition for shadow on hover */
+.mtr-news {
+  &__tile {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-img1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background-image 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: inherit;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+  
+    &:hover {
+      background-image: url('../images/news-img1.png');
+      &::before {
+        transform: scale(1.1); 
+      }
+      .mtr-news__link {
+        background-image: url('../images/white-arrow.svg');
+        background-size: 16px 16px;
+        transform: translateX(-4px);
+      }
+    }
+  }
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 16px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.7),
+                0px 5px 10px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 22px;
+  }
+  &__link {
+    color: #fff;
+    padding-right: 20px;
+    text-decoration: none;
+    background-image: url('../images/sm-white-arrow.svg');
+    background-size: 12px 12px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
-.news-tile__image {
-  width: 100%;
-  height: auto;
-  display: block; /* Remove extra space below image */
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  transition: opacity 0.3s ease; /* Smooth transition for image opacity on hover */
-}
-
-.news-tile__content {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.news-tile__title {
-  font-size: 1em;
-  color: #333;
-  line-height: 1.4;
-  margin: 0;
-  transition: color 0.3s ease; /* Smooth transition for title color on hover */
-}
-
-.news-tile__link {
-  color: #007BFF; /* Example blue color */
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for link styles */
-}
-
-/* Hover Styles */
-.news-tile:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
-}
-
-.news-tile:hover .news-tile__image {
-  opacity: 0.9; /* Slightly fade image on hover */
-}
-
-.news-tile:hover .news-tile__title {
-  color: #0C456C; /* Example darker title color on hover */
-}
-
-.news-tile:hover .news-tile__link {
-  text-decoration: underline; /* Underline link on hover */
-  color: #1994E5; /* Example different link color on hover */
+@include mobile {
+  .mtr-news {
+    &__title, &__link {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    &__link {
+      white-space: nowrap;
+    }
+  }
 }
