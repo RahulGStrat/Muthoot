@@ -57,6 +57,37 @@ $('.mtr-impact__outer').slick({
   ]
 });
 
+// Framework tile hiding script
+
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+const tileContainer = document.getElementById('tileContainer');
+let isExpanded = false; // Variable to track expansion state
+const initiallyHiddenTiles = document.querySelectorAll('.hidden-tile'); // Store initial hidden tiles
+
+viewMoreBtn.addEventListener('click', () => {
+
+if (!isExpanded) { // If not currently expanded (i.e., in "View More" state)
+  initiallyHiddenTiles.forEach(tile => { // Use the stored list
+      tile.classList.remove('hidden-tile');
+  });
+  viewMoreBtn.textContent = 'View Less'; // Change button text to "View Less"
+  isExpanded = true; // Update expansion state to true (expanded)
+} else { // If already expanded (i.e., in "View Less" state)
+  console.log("View Less Clicked!"); // Debug: Check if this block is reached
+  console.log("Number of hiddenTiles to re-hide:", initiallyHiddenTiles.length); // Debug: Check how many tiles we are about to re-hide
+
+  initiallyHiddenTiles.forEach(tile => { // Use the stored list
+      console.log("Adding hidden-tile class to:", tile); // Debug: Check which tile is being processed
+      tile.classList.add('hidden-tile'); // Re-hide the tiles by adding the class back
+  });
+  viewMoreBtn.textContent = 'View More'; // Change button text back to "View More"
+  isExpanded = false; // Update expansion state to false (collapsed)
+}
+
+// Optionally, hide/show button depending on your desired behavior
+// viewMoreBtn.style.display = 'none'; //  <-- Remove or comment out if you want to toggle
+});
+
 //PDF OPEN IN SAME WINDOW
 // document.addEventListener("DOMContentLoaded", function() {
 //     var links = document.querySelectorAll('a[target="_blank"]');
@@ -242,4 +273,3 @@ window.addEventListener('scroll', function () {
         headers.classList.remove('sticky-header-scroll');
     }
 });
-
