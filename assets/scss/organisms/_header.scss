@@ -23,6 +23,11 @@
             &:hover{
                 color: #0095DA;
             }
+            
+                    &.active {
+                        color: #0095DA;
+                        font-weight: 500;
+                    }
         }
     }
 }
