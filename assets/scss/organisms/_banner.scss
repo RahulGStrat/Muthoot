@@ -1,0 +1,77 @@
+.mtr-banner{
+    background-image: url('../images/banner.png');
+    width: 100%;
+    min-height: 580px;
+    height: auto;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__content{
+        width: 65%;
+        padding: 80px 0;
+       
+        p{
+            font-size: 22px;
+            line-height: 28px;
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+        a{
+            background-color: #FFFFFF;
+            color: #007bff; 
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out; 
+        
+            &:hover {
+                color: #000000;
+              }
+            
+              &:active {
+                background-color: #FFFFFF; 
+              }
+           
+        }
+    }
+}
+
+@include mobile{
+    .mtr-banner{
+        background-image: url('../images/about-us-banner.png');
+        width: 100%;
+        height: auto;
+        padding: 32px 0;
+        &__content{
+            width: 100%;
+            padding: 20px;        
+        }
+    }
+}
+@include tablet-pro{
+    .mtr-banner{
+        background-image: url('../images/about-us-banner.png');
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+
+        &__content{
+            width: 100%;
+            padding: 50px 20px;        
+        }
+    }
+}
+
+@include tablet{
+    .mtr-banner{
+        background-image: url('../images/about-us-banner.png');
+
+        &__content{
+            width: 100%;
+        }
+    }
+}

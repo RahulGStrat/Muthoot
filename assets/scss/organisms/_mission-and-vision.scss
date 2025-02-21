@@ -1,4 +1,5 @@
 .mtr-feature {
+    transform: translateY(110px);
     &__wrap {
         background: linear-gradient(to top, #0C456C, #1994E5);
         display: flex;
@@ -87,8 +88,15 @@
     }
 }
 
+@include tablet-pro {
+    .mtr-feature {
+        transform: translateY(175px);
+    }
+}
+
 @include tablet {
     .mtr-feature {
+        transform: translateY(130px);
         &__wrap {
             gap: 30px;
             flex-direction: column;
