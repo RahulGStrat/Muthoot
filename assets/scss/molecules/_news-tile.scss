@@ -1,11 +1,9 @@
 .mtr-news {
   &__tile {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/news-img1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -25,15 +23,51 @@
       background-size: cover;
       transition: transform 0.5s ease-in-out;
     }
+    &.first {
+      min-height: 380px;
+      &:hover {
+        background-image: url('../images/news-img1.png') !important;
+      }
+    }
+    &.second {
+      min-height: 180px;
+      margin-bottom: 20px;
+      &:hover {
+        background-image: url('../images/news-img2.png') !important;
+      }
+    }
+    &.third {
+      &:hover {
+        background-image: url('../images/news-img3.png') !important;
+      }
+    }
+    &.fourth {    
+      &:hover {
+        background-image: url('../images/news-img4.png') !important;
+      }
+    }
+    &.third , &.fourth {
+      justify-content: center;
+      min-height: 180px;
+      width: 50%;
+      &:hover {
+        &::before {
+          transform: scale(1);
+        }
+        .mtr-news__icon {
+          transform: scale(1.1);
+        }
+      }
+    }
   
     &:hover {
-      background-image: url('../images/news-img1.png');
       &::before {
         transform: scale(1.1); 
       }
       .mtr-news__link {
         background-image: url('../images/white-arrow.svg');
-        background-size: 16px 16px;
+        background-size: 18px 18px;
+        padding-right: 24px;
         transform: translateX(-4px);
       }
     }
@@ -49,7 +83,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
     gap: 6px;
+  }
+  &__icon {
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
   }
   &__title {
     font-size: 16px;
@@ -65,11 +104,28 @@
     background-size: 12px 12px;
     background-position: right center;
     background-repeat: no-repeat;
+    white-space: nowrap;
     transition: 0.3s ease;
     &:hover {
       color: #fff;
     }
   }
+}
+
+@include tablet {
+  .mtr-news {
+    &__tile {
+      &.first {
+        min-height: 340px;
+      }
+      &.second {
+        min-height: 160px;
+      }
+      &.third , &.fourth {
+        min-height: 160px;
+      }
+    }
+  } 
 }
 
 @include mobile {
@@ -78,8 +134,16 @@
       font-size: 15px;
       line-height: 20px;
     }
-    &__link {
-      white-space: nowrap;
+    &__tile {
+      &.first {
+        min-height: 300px;
+      }
+      &.second {
+        min-height: 250px;
+      }
+      &.third , &.fourth {
+        min-height: 150px;
+      }
     }
   }
 }
