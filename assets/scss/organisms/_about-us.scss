@@ -83,9 +83,6 @@
      &__left{
          width: 45%;
          margin-top: 20px;
-         img{
-             height: 150px;
-         }
      }
 
      &__right{
@@ -100,13 +97,13 @@
      &__leftimg {
         &:nth-child(1),&:nth-child(4) {
             img {
-                height: 170px;
+                height: 160px;
             }
         }
 
         &:nth-child(2),&:nth-child(3) {
             img {
-                height: 150px;
+                height: 140px;
             }
         }
      }
