@@ -4,8 +4,11 @@
   color: #0098DF;
   &:hover {
     color: #0098DF;
-    .mtr-btn__icon img {
+    .mtr-btn__icon:not(.mtr-btn__icon--rotated) img {
       transform: translateX(0);
+    }
+    .mtr-btn__icon--rotated img {
+      transform: translateX(4px) scaleX(-1);
     }
   }
   &__icon {
@@ -21,6 +24,11 @@
       width: 90%;
       transform: translateX(-14px);
       transition: transform 0.3s ease-in-out;
+    }
+    &--rotated {
+      img {
+        transform: translateX(14px) scaleX(-1);
+      }
     }
   }
 }
