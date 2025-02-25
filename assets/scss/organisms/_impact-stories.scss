@@ -52,3 +52,10 @@
     }
   }
 }
+
+.impact-text {
+  display: none;
+}
+.impact-text.active {
+  display: block;
+}

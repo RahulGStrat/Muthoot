@@ -55,6 +55,9 @@ $('.mtr-impact__outer').slick({
       }
     }
   ]
+  }).on('afterChange', function(event, slick, currentSlide) {
+    $('.impact-text').removeClass('active');
+    $('.impact-text[data-index="' + currentSlide + '"]').addClass('active');
 });
 
 // Framework tile hiding script
