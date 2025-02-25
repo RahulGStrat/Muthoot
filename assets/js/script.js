@@ -62,27 +62,37 @@ $('.mtr-impact__outer').slick({
 
 // Framework tile hiding script
 
-const viewMoreBtn = document.getElementById('viewMoreBtn');
-const tileContainer = document.getElementById('tileContainer');
-let isExpanded = false;
-const initiallyHiddenTiles = document.querySelectorAll('.hidden-tile');
+const policyViewMoreBtn = document.getElementById('policyViewMoreBtn');
+const othersViewMoreBtn = document.getElementById('othersViewMoreBtn');
+const policyTileContainer = document.getElementById('policyTileContainer');
+const othersTileContainer = document.getElementById('othersTileContainer');
 
-viewMoreBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const icon = viewMoreBtn.querySelector('.mtr-btn__icon');
+const policyInitiallyHiddenTiles = policyTileContainer.querySelectorAll('.hidden-tile');
+const othersInitiallyHiddenTiles = othersTileContainer.querySelectorAll('.hidden-tile');
 
-  if (!isExpanded) {
-    initiallyHiddenTiles.forEach(tile => tile.classList.remove('hidden-tile'));
-    viewMoreBtn.firstChild.textContent = 'View Less ';
-    icon.classList.add('mtr-btn__icon--rotated');
-    isExpanded = true;
-  } else {
-    initiallyHiddenTiles.forEach(tile => tile.classList.add('hidden-tile'));
-    viewMoreBtn.firstChild.textContent = 'View More ';
-    icon.classList.remove('mtr-btn__icon--rotated');
-    isExpanded = false;
-  }
-});
+
+function setupViewMore(button, hiddenTiles) {
+    let isExpanded = false;
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const icon = button.querySelector('.mtr-btn__icon');
+
+        if (!isExpanded) {
+            hiddenTiles.forEach(tile => tile.classList.remove('hidden-tile'));
+            button.firstChild.textContent = 'View Less ';
+            icon.classList.add('mtr-btn__icon--rotated');
+            isExpanded = true;
+        } else {
+            hiddenTiles.forEach(tile => tile.classList.add('hidden-tile'));
+            button.firstChild.textContent = 'View More ';
+            icon.classList.remove('mtr-btn__icon--rotated');
+            isExpanded = false;
+        }
+    });
+}
+
+setupViewMore(policyViewMoreBtn, policyInitiallyHiddenTiles);
+setupViewMore(othersViewMoreBtn, othersInitiallyHiddenTiles);
 
 //PDF OPEN IN SAME WINDOW
 // document.addEventListener("DOMContentLoaded", function() {
